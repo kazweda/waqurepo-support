@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>水質検査報告アプリ</title>
+    <title>Water Quality Reporter</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -30,6 +30,18 @@
         .header p {
             font-size: 1.3em;
             opacity: 0.9;
+        }
+        .lang-switch {
+            text-align: right;
+            padding: 10px 20px 0;
+        }
+        .lang-switch a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .lang-switch a:hover {
+            color: white;
         }
         .content {
             background: white;
@@ -82,104 +94,75 @@
         .btn:hover {
             background: #764ba2;
         }
-        .btn-secondary {
-            background: #6c757d;
-        }
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
         footer {
             text-align: center;
             padding: 20px;
             color: white;
             margin-top: 40px;
         }
-        .lang-switch {
-            text-align: right;
-            padding: 10px 20px 0;
-        }
-        .lang-switch a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .lang-switch a:hover {
-            color: white;
-        }
     </style>
 </head>
 <body>
     <div class="lang-switch">
-        <a href="/en/">English</a>
+        <a href="/">日本語</a>
     </div>
     <div class="header">
-        <h1>💧 水質検査報告アプリ</h1>
-        <p>水道施設の残留塩素濃度を簡単にメール報告</p>
+        <h1>&#x1F4A7; Water Quality Reporter</h1>
+        <p>Simple daily chlorine reporting for water facilities</p>
     </div>
 
     <div class="container">
         <div class="content">
             <div class="section">
-                <h2>アプリについて</h2>
-                <p>水質検査報告アプリは、水道関連業務の残留塩素濃度測定結果を、指定されたメールアドレスに自動送信するアプリです。毎日の水質チェック業務を効率化し、確実な報告体制を構築できます。</p>
+                <h2>About</h2>
+                <p>Water Quality Reporter is an app for water facility operators to report residual chlorine measurements by email. Enter your reading, tap Send — the report goes straight to your recipients from your own account.</p>
             </div>
 
             <div class="section">
-                <h2>主な機能</h2>
+                <h2>Key Features</h2>
                 <div class="features">
                     <div class="feature">
-                        <h3>📊 簡単入力</h3>
-                        <p>残留塩素濃度の測定結果を素早く入力できます。</p>
+                        <h3>&#x1F4CA; Quick Entry</h3>
+                        <p>Enter residual chlorine values quickly with built-in validation.</p>
                     </div>
                     <div class="feature">
-                        <h3>📧 自動送信</h3>
-                        <p>Gmail API経由で測定結果を自動的にメール送信します。</p>
+                        <h3>&#x1F4E7; Direct Delivery</h3>
+                        <p>Reports are sent directly from your own account — no third-party servers involved.</p>
                     </div>
                     <div class="feature">
-                        <h3>📝 履歴管理</h3>
-                        <p>過去の送信履歴をアプリ内で確認・管理できます。</p>
+                        <h3>&#x1F4DD; Send History</h3>
+                        <p>View and manage past reports within the app.</p>
                     </div>
                     <div class="feature">
-                        <h3>🔒 セキュア</h3>
-                        <p>OAuth 2.0による安全な認証、データは端末内のみに保存。</p>
+                        <h3>&#x1F512; Privacy First</h3>
+                        <p>Your data stays on your device. Nothing is stored on external servers by the developer.</p>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>対象ユーザー</h2>
+                <h2>Who Is This For?</h2>
                 <ul>
-                    <li>水道施設管理者</li>
-                    <li>水質検査担当者</li>
-                    <li>自治体職員</li>
-                    <li>水道工事業者</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>プライバシーとセキュリティ</h2>
-                <p>本アプリは、ユーザーのプライバシーを最優先に考えています：</p>
-                <ul>
-                    <li>個人情報は端末内にのみ保存</li>
-                    <li>Firebase Functions経由で安全にメール送信</li>
-                    <li>あなたのGoogleアカウントから直接送信</li>
-                    <li>第三者へのデータ提供なし</li>
+                    <li>Water facility operators</li>
+                    <li>Water quality inspectors</li>
+                    <li>Municipal water management staff</li>
+                    <li>Water utility technicians</li>
                 </ul>
             </div>
 
             <div class="links">
-                <a href="/privacy-policy/" class="btn">プライバシーポリシー</a>
+                <a href="/privacy-policy/en/" class="btn">Privacy Policy</a>
             </div>
 
             <div class="section">
-                <h2>お問い合わせ</h2>
-                <p>ご質問やサポートが必要な場合は、以下までご連絡ください：</p>
-                <p><strong>メールアドレス</strong>: <a href="mailto:support@netplan.co.jp">support (at) netplan.co.jp</a></p>
+                <h2>Contact</h2>
+                <p>For questions or support, please contact us:</p>
+                <p><strong>Email</strong>: <a href="mailto:support@netplan.co.jp">support (at) netplan.co.jp</a></p>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2026 水質検査報告アプリ. All rights reserved.</p>
+            <p>&copy; 2026 Water Quality Reporter. All rights reserved.</p>
         </footer>
     </div>
 </body>
