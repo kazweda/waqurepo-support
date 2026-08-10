@@ -78,7 +78,7 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="updated"><strong>Last updated: April 19, 2026</strong></p>
+        <p class="updated"><strong>Last updated: August 10, 2026</strong></p>
 
         <p>Water Quality Reporter ("the App") is committed to protecting your privacy. This policy explains what information the App collects and how it is used.</p>
 
@@ -90,6 +90,7 @@
             <li><strong>Measurement data</strong> — residual chlorine readings you enter before sending</li>
         </ul>
         <p>The App may also collect anonymized crash reports to help diagnose and fix technical issues.</p>
+        <p>The recipient email address and your own Google account email address may be temporarily recorded in server-side processing logs when a report is sent (see "3. Data Storage" for details).</p>
 
         <h2>2. How We Use Your Information</h2>
         <p>Collected information is used solely to:</p>
@@ -102,8 +103,9 @@
         <p>Your data is never sold, shared for advertising, or used for any purpose other than operating the App.</p>
 
         <h2>3. Data Storage</h2>
-        <p>Your settings, send history, and authentication credentials are stored <strong>on your device only</strong>. The App developer does not store this data on external servers.</p>
-        <p>Measurement data is transmitted to your recipients when you tap Send. It is not retained by the App developer.</p>
+        <p>Your settings, send history, and authentication credentials are stored <strong>on your device only</strong>.</p>
+        <p>Measurement data (residual chlorine readings) is handled only in server memory for the duration of the send request and is not stored.</p>
+        <p>Sending a report is processed via <strong>Firebase Cloud Functions</strong>, which runs on the developer's Google Cloud project. As part of this processing, the sender's (your Google account) and recipient's email addresses are recorded in Google Cloud Logging for the default retention period (Google Cloud's standard setting), as a record of the processing outcome. These logs are used solely for troubleshooting and error diagnosis.</p>
         <p>Separately, anonymized crash diagnostics may be transmitted to and stored by Google via <strong>Firebase Crashlytics</strong>.</p>
 
         <h2>4. Third-Party Services</h2>
@@ -111,6 +113,7 @@
         <ul>
             <li><strong>Google Sign-In</strong> — for authentication</li>
             <li><strong>Gmail</strong> — to send reports from your own account</li>
+            <li><strong>Firebase Cloud Functions</strong> — to process report sending (runs on a Google Cloud project; processing logs temporarily record sender and recipient email addresses)</li>
             <li><strong>Firebase Crashlytics</strong> — for anonymized crash reporting</li>
         </ul>
         <p>Each service is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
